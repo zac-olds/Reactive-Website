@@ -6,7 +6,7 @@ BeerInfo
 
 ## Project Description
 
-A simple website that will allow the user to search beer types you to enjoy a frosty beverage based on user preferences.
+A simple website that will allow the user to search beer types, find a random beer, and browse brewery locations around the world, based on user preferences.
 
 ## API and Data Sample
 https://sandbox-api.brewerydb.com/v2/beers/?withBreweries=Y&key=ae3ade67fa77bbf2517926c1875d09f8
@@ -81,7 +81,7 @@ locations: []
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+https://wireframe.cc/4RLOJd
 
 ### MVP/PostMVP
 
