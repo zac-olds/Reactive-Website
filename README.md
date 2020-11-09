@@ -1,11 +1,11 @@
 # Reactive-Website
-This is a placeholder
+BeerInfo
 
 # Project Overview
 
 ## Project Name
 
-The name of your project.
+BeerInfo
 
 ## Project Description
 
