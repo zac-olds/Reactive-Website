@@ -1,5 +1,3 @@
-# Reactive-Website
-
 # Project Overview
 
 ## Project Name
@@ -8,11 +6,41 @@ BeerInfo
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+A simple website that will enable you to enjoy a frosty beverage based on user preferences.
 
 ## API and Data Sample
+https://www.brewerydb.com/developers/docs
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+```JSON
+{
+currentPage: 1,
+numberOfPages: 1,
+totalResults: 19,
+data: [
+{
+id: "HaPdSL",
+name: "Guinness",
+nameShortDisplay: "Guinness",
+description: "St. James's Gate Brewery (Irish: Grúdlann Gheata Shan Séamuis) is a brewery founded in 1759 in Dublin, Ireland by Arthur Guinness. The company is now a part of Diageo, a company formed via the merger of Guinness and Grand Metropolitan in 1997. The main product produced at the brewery is Guinness Draft. Leased for 9,000 years in 1759 by Arthur Guinness at £45 per year, St. James's Gate has been the home of Guinness ever since. It became the largest brewery in Ireland in 1838, and was the largest in the world in 1914, covering 64 acres. Although no longer the largest brewery in the world, it is still the largest brewer of stout in the world. During the 19th and early 20th centuries, the brewery owned most of the buildings in the surrounding area, including many streets of housing for brewery employees, and offices associated with the brewery. The brewery also made all of its own power using its own power plant. There is an attached exhibition on the 250-year-old history of Guinness, called the Guinness Storehouse.",
+website: "http://www.guinness.com/",
+established: "1759",
+isOrganic: "N",
+images: {
+icon: "https://brewerydb-images.s3.amazonaws.com/brewery/HaPdSL/upload_b3rzyZ-icon.png",
+medium: "https://brewerydb-images.s3.amazonaws.com/brewery/HaPdSL/upload_b3rzyZ-medium.png",
+large: "https://brewerydb-images.s3.amazonaws.com/brewery/HaPdSL/upload_b3rzyZ-large.png",
+squareMedium: "https://brewerydb-images.s3.amazonaws.com/brewery/HaPdSL/upload_b3rzyZ-squareMedium.png",
+squareLarge: "https://brewerydb-images.s3.amazonaws.com/brewery/HaPdSL/upload_b3rzyZ-squareLarge.png"
+},
+status: "verified",
+statusDisplay: "Verified",
+createDate: "2012-01-03 02:41:56",
+updateDate: "2018-11-02 02:15:01",
+isMassOwned: "Y",
+isInBusiness: "Y",
+isVerified: "N"
+},
+```
 
 ## Wireframes
 
