@@ -1,5 +1,4 @@
 # Reactive-Website
-BeerInfo
 
 # Project Overview
 
