@@ -99,7 +99,7 @@ https://wireframe.cc/4RLOJd
 
 #### PostMVP  
 
-- Add ability to review beers with notes, etc.  and store on a local server
+- Add ability to review beers with notes, etc. and store on a local server
 - Add ability to find breweries near the user
 - Add a second API with brewery beer menus/lists
 
@@ -111,7 +111,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Nov 10| Project Approval | Incomplete
 |Nov 12| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Nov 13| Pseudocode / actual code | Incomplete
@@ -124,15 +124,19 @@ https://postimg.cc/1VG5LCfm
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day. Students usally put in around 40+ hours into their project 1.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Endpoints and implement api | H | 3hrs| 0hrs | 0hrs |
+| HTML, CSS, and JavaScript files | H | 3hrs| 0hrs | 0hrs |
+| Async/await function to gather data from API | H | 3hrs| 0hrs | 0hrs |
+| Set up map | H | 3hrs| 0hrs | 0hrs |
+| Beer search input and button | H | 3hrs| 0hrs | 0hrs |
+| Beer info section | H | 3hrs| 0hrs | 0hrs |
+| Format with CSS | H | 3hrs| 0hrs | 0hrs |
+| Review beers with notes | H | 3hrs| 0hrs | 0hrs |
+| Find breweries near the user | H | 3hrs| 0hrs | 0hrs |
+| 2nd API with brewery beer menus/lists | H | 3hrs| 0hrs | 0hrs |
+| Total | H | 6hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
