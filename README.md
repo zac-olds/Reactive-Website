@@ -6,7 +6,7 @@ beerQuery
 
 ## Project Description
 
-A simple website that will allow the user to search beer types, find a random beer, and browse brewery locations around the world, based on user preferences.
+A simple website that will allow the user to search a catalog of beers from around the world and get information about the beer (e.g. type, ABV, glassware, brewery, and a description of the beer). Website will load up with information and brewery location of a random beer, and allow the user to choose what they want to do from a drop down menu. Menu items will include beer search, finding brewery locations and random beer.
 
 ## API and Data Sample
 https://sandbox-api.brewerydb.com/v2/beers/?withBreweries=Y&key=ae3ade67fa77bbf2517926c1875d09f8
