@@ -11,7 +11,7 @@ A simple website that will allow the user to search beer types, find a random be
 ## API and Data Sample
 https://sandbox-api.brewerydb.com/v2/beers/?withBreweries=Y&key=ae3ade67fa77bbf2517926c1875d09f8
 
-```JSON
+```
 {
 id: "MgdJep",
 name: "200th Anniversary Export Stout",
@@ -127,16 +127,16 @@ https://postimg.cc/1VG5LCfm
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Endpoints and implement api | H | 3hrs| 0hrs | 0hrs |
-| HTML, CSS, and JavaScript files | H | 3hrs| 0hrs | 0hrs |
-| Async/await function to gather data from API | H | 3hrs| 0hrs | 0hrs |
-| Set up map | H | 3hrs| 0hrs | 0hrs |
+| HTML, CSS, and JavaScript files | H | 1hrs| 0hrs | 0hrs |
+| Async/await function to gather data from API | H | 4hrs| 0hrs | 0hrs |
+| Set up map | H | 4hrs| 0hrs | 0hrs |
 | Beer search input and button | H | 3hrs| 0hrs | 0hrs |
-| Beer info section | H | 3hrs| 0hrs | 0hrs |
-| Format with CSS | H | 3hrs| 0hrs | 0hrs |
-| Review beers with notes | H | 3hrs| 0hrs | 0hrs |
-| Find breweries near the user | H | 3hrs| 0hrs | 0hrs |
-| 2nd API with brewery beer menus/lists | H | 3hrs| 0hrs | 0hrs |
-| Total | H | 6hrs| 0hrs | 0hrs |
+| Beer info section | H | 4hrs| 0hrs | 0hrs |
+| Format with CSS | H | 6hrs| 0hrs | 0hrs |
+| Review beers with notes | H | 5hrs| 0hrs | 0hrs |
+| Find breweries near the user | H | 5hrs| 0hrs | 0hrs |
+| 2nd API with brewery beer menus/lists | H | 5hrs| 0hrs | 0hrs |
+| Total | H | 40hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
