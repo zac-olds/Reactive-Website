@@ -11,7 +11,7 @@ A simple website that will allow the user to search beer types, find a random be
 ## API and Data Sample
 https://sandbox-api.brewerydb.com/v2/beers/?withBreweries=Y&key=ae3ade67fa77bbf2517926c1875d09f8
 
-```
+```JSON
 {
 id: "MgdJep",
 name: "200th Anniversary Export Stout",
