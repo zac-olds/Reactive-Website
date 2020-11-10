@@ -2,7 +2,7 @@
 
 ## Project Name
 
-BeerInfo
+beerQuery
 
 ## Project Description
 
@@ -85,20 +85,23 @@ https://wireframe.cc/4RLOJd
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Find endpoints and implement api
+- Set up html, css, and javascript files
+- Set up async/await function to gather data from API
+- Set up map
+- Impliment "home page" to display random beer with random beer button
+- Set up menu
+- Impliment beer search input and button
+- Set up the beer info section
+- Format with CSS
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- Add ability to review beers with notes, etc.  and store on a local server
+- Add ability to find breweries near the user
+- Add a second API with brewery beer menus/lists
 
 ## Project Schedule
 
@@ -109,7 +112,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |  Day | Deliverable | Status
 |---|---| ---|
 |Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Nov 11| Project Approval | Incomplete
+|Nov 10| Project Approval | Incomplete
 |Nov 12| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Nov 13| Pseudocode / actual code | Incomplete
 |Nov 16| MVP | Incomplete
@@ -117,7 +120,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+https://postimg.cc/1VG5LCfm
 
 ## Timeframes
 
