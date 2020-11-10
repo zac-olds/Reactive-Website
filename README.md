@@ -90,7 +90,6 @@ https://wireframe.cc/4RLOJd
 - Find endpoints and implement api
 - Set up html, css, and javascript files
 - Set up async/await function to gather data from API
-- Set up map
 - Impliment "home page" to display random beer with random beer button
 - Set up menu
 - Impliment beer search input and button
@@ -99,6 +98,8 @@ https://wireframe.cc/4RLOJd
 
 #### PostMVP  
 
+- Set up map
+- Set up ability to handle multiple search results
 - Add ability to review beers with notes, etc. and store on a local server
 - Add ability to find breweries near the user
 - Add a second API with brewery beer menus/lists
@@ -131,9 +132,12 @@ https://postimg.cc/1VG5LCfm
 | Beer search input and button | H | 3hrs| 0hrs | 0hrs |
 | Beer info section | H | 4hrs| 0hrs | 0hrs |
 | Format with CSS | H | 6hrs| 0hrs | 0hrs |
-| Review beers with notes | H | 5hrs| 0hrs | 0hrs |
-| Find breweries near the user | H | 5hrs| 0hrs | 0hrs |
-| 2nd API with brewery beer menus/lists | H | 5hrs| 0hrs | 0hrs |
+| Research how to review beers with notes | H | 2hrs| 0hrs | 0hrs |
+| Review beers with notes | H | 3hrs| 0hrs | 0hrs |
+| Research how to find breweries near the user | H | 2hrs| 0hrs | 0hrs |
+| Find breweries near the user | H | 3hrs| 0hrs | 0hrs |
+| 2nd API with brewery beer menus/lists | H | 2hrs| 0hrs | 0hrs |
+| Research 2nd API with brewery beer menus/lists | H | 3hrs| 0hrs | 0hrs |
 | Total | H | 40hrs| 0hrs | 0hrs |
 
 ## Code Snippet
@@ -148,3 +152,4 @@ function reverse(string) {
 
 ## Change Log
 11/10/2020 - Updated README.md
+11/10/2020 - Updated MVPS and timeframes
