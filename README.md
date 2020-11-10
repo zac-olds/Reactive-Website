@@ -111,7 +111,7 @@ The below schedule is how I intend to complete my project by the deadline. Some 
 |  Day | Deliverable | Status
 |---|---| ---|
 |Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Nov 10| Project Approval | Incomplete
+|Nov 10| Project Approval | Complete
 |Nov 12| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Nov 13| Pseudocode / actual code | Incomplete
 |Nov 16| MVP | Incomplete
@@ -151,5 +151,5 @@ function reverse(string) {
 ```
 
 ## Change Log
-11/10/2020 - Updated README.md
-11/10/2020 - Updated MVPS and timeframes
+- 11/10/2020 - Updated README.md
+- 11/10/2020 - Updated MVPS and timeframes
