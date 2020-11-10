@@ -105,9 +105,7 @@ https://wireframe.cc/4RLOJd
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
+The below schedule is how I intend to complete my project by the deadline. Some tasks may be subject to change as the project evolves.
 
 |  Day | Deliverable | Status
 |---|---| ---|
@@ -140,7 +138,7 @@ https://postimg.cc/1VG5LCfm
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+This is a place holder for a code snippet that I am particularly proud of.  
 
 ```
 function reverse(string) {
@@ -149,4 +147,4 @@ function reverse(string) {
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+11/10/2020 - Updated README.md
