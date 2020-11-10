@@ -82,7 +82,7 @@ https://postimg.cc/1VG5LCfm
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Endpoints and implement api | H | 3hrs| 0hrs | 0hrs |
+| Endpoints and implement api | H | 3hrs| 3hrs | 0hrs |
 | HTML, CSS, and JavaScript files | H | 1hrs| 0hrs | 0hrs |
 | Async/await function to gather data from API | H | 4hrs| 0hrs | 0hrs |
 | Beer search input and button | H | 3hrs| 0hrs | 0hrs |
