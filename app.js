@@ -1,4 +1,3 @@
-console.log("beer");
 // API Examples:
 
 // Search by brewery
@@ -10,7 +9,9 @@ console.log("beer");
 // List breweries by postal code
 // `https://api.openbrewerydb.org/breweries?by_postal=${zip}`
 
-const getBrewery = async (brewery) => {
+
+// brewData will fetch data from the openbrewerydb api and return it as an array of objects.
+const brewData = async (brewery) => {
   try {
     const url = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${brewery}`);
     console.log(url.data)
@@ -20,4 +21,21 @@ const getBrewery = async (brewery) => {
   }
 }
 
-getBrewery(`Goose`);
+brewData(`Goose`);
+
+// event listener
+const brewSearch = () => {
+  let searchInput = document.querySelector(`#search-button`);
+  searchInput.addEventListener('click', (event) => {
+    event.preventDefault
+    const searchText = document.querySelector('#brew-search-input');
+    console.log(searchText.value);
+  })
+}
+
+brewSearch();
+
+// add search results
+
+
+// function to remove previous search results
