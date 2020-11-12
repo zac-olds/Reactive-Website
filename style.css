@@ -9,7 +9,12 @@
 ========================================================================== */
 
 body {
-  background-color: blanchedalmond;
+  background-image: url("images/wood-411643_1280.jpg");
+  /* background-image: linear-gradient(#362e27, black); */
+  /* background-repeat: no-repeat; */
+  background-size: 800px auto;
+  /* max-width: 1000px; */
+  /* background-position: 50% 0; */
   text-align: center;
 }
 
@@ -23,6 +28,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-family: 'Arvo', serif;
 }
 
 .menu-bars {
@@ -44,13 +50,34 @@ main {
 }
 
 .brewery-search-container {
-  background-color: goldenrod;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.BGQk5SYMm7-rgUEbeyVPxAHaE6%26pid%3DApi&f=1");
+  border: 8px double #706e6c;
+  /* border-style: ridge; */
+  /* border-width: 20px 20px 20px 20px; */
   height: 300px;
   width: 300px;
-  align-items: center;
+  border-radius: 100%;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
-#dumb-button {
+.brewery-search-container:before {
+  /* content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 5px solid goldenrod; */
+
+}
+
+#brew-header {
+  padding: 10px;
+}
+
+#search-button {
   height: 25px;
   width: 75px;
 }
@@ -75,3 +102,7 @@ a:hover {
 /* ==========================================================================
    Footer Styles
 ========================================================================== */
+
+@media (max-width: 500px) {
+
+}

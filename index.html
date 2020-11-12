@@ -6,6 +6,8 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="./app.js"></script>
   <script src="https://kit.fontawesome.com/03edf7f690.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Roboto:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <title>brewQuery</title>
@@ -19,7 +21,7 @@
   </header>
   <main>
     <section class="brewery-search-container">
-      <h2>Brewery Search</h2>
+      <h2 id="brew-header">Brewery Search</h2>
       <div class="brew-search">
         <input type="text" id="brew-search-input" placeholder="Brewery Name"></input>
         <button type="submit" id="search-button">Search</button>
