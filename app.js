@@ -53,16 +53,27 @@ const brewSearch = () => {
 brewSearch();
 
 // ======================================================
-// showBrewInfo - will take data obtained from brewData and append it to the brewery info section of the website.
+// showBrewInfo - will take data obtained from brewData and append it to the brewery info section of the website. It will also add the link to the brewery if it is available.
 // ======================================================
 const showBrewInfo = (brewData) => {
-  let brewInfo = 
+  // const appendBrew = 
+  if (brewData.website_url != "") {
+    let brewInfo = 
     `
     <a href="${brewData.website_url}">${brewData.name}</a>
     <h4>${brewData.city}, ${brewData.state}</h4>
     `;
-  let container = document.querySelector('#brewery-info');
-  container.insertAdjacentHTML('beforeend', brewInfo);
+    let container = document.querySelector('#brewery-info');
+    container.insertAdjacentHTML('beforeend', brewInfo);
+  } else {
+    let brewInfo = 
+    `
+    <h3>${brewData.name}</h3>
+    <h4>${brewData.city}, ${brewData.state}</h4>
+    `;
+    let container = document.querySelector('#brewery-info');
+    container.insertAdjacentHTML('beforeend', brewInfo);
+  }
 }
 
 // ======================================================
