@@ -10,19 +10,12 @@
 // `https://api.openbrewerydb.org/breweries?by_postal=${zip}`
 
 
-
-
 //===============================================
 // brewData - will fetch data from the openbrewerydb api and return it as an array of objects.
 // ===============================================
 const brewData = async (brewery) => {
   try {
     const url = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${brewery}`);
-    // console.log(url.data[0].name);
-    // console.log(url.data);
-    // showBrewInfo(url.data[0]);
-    // showBrewInfo(url.data[1]);
-    // showBrewInfo(url.data[2]);
     return url.data;
   } catch (error) {
     console.log(`Something is Wrong: ${error}`)
@@ -38,24 +31,27 @@ const brewSearch = () => {
     event.preventDefault
     const searchText = document.querySelector('#brew-search-input');
     const data = await brewData(searchText.value);
-    console.log(searchText.value);
-    console.log(data);
+    // console.log("Search text: ", searchText);
+    // console.log("Text value: ", searchText.value);
+    // console.log("Data array: ", data);
 
-    // if (Number(searchText.value)==searchText) {
-    //   const filterData = data
-    // } else {
-
-    // }
-    const filterData = data.filter(
-      (item) => {
-        return item.name.toLowerCase().includes(searchText.value.toLowerCase());
-        // console.log(item.name)
-      }  
-    )
+    // Checking if input value is a number
+    let filterData;
+    if (Number(searchText.value)==searchText.value) {
+      filterData = data
+    } else { // If input value is not a number, filter out API responses that dont include the input value in the name of the brewery (i.e. street name responses)
+      filterData = data.filter(
+        (item) => {
+          return item.name.toLowerCase().includes(searchText.value.toLowerCase());
+          // console.log(item.name)
+        }  
+      )
+    }
+    
     console.log("This is filtered", filterData);
     brewRemove();
     showBrewInfo(filterData[0]);
-    showBrewInfo(filterData[1]);
+    // showBrewInfo(filterData[1]);
   })
 }
 
