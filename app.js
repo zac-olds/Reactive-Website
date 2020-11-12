@@ -1,7 +1,7 @@
 // API Examples:
 
 // Search by brewery
-// `https://api.openbrewerydb.org/breweries/search?query=${brewery}`
+// `https://api.openbrewerydb.org/breweries/search?query=${brewery}&sort=-name`
 
 // List breweries by city
 // `https://api.openbrewerydb.org/breweries?by_city=${city}`
@@ -18,24 +18,35 @@
 const brewData = async (brewery) => {
   try {
     const url = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${brewery}`);
-    console.log(url.data[0].name);
-    brewRemove();
-    showBrewInfo(url.data[0]);
-    return url;
+    // console.log(url.data[0].name);
+    // console.log(url.data);
+    // showBrewInfo(url.data[0]);
+    // showBrewInfo(url.data[1]);
+    // showBrewInfo(url.data[2]);
+    return url.data;
   } catch (error) {
     console.log(`Something is Wrong: ${error}`)
   }
 };
 
 // ======================================================
-// brewSearch - adds an event listener to the brewery search input and calls brewData with the value that is returned. Text input can be the name of a brewery, a zip code, or a city.
+// brewSearch - adds an event listener to the brewery search input and calls brewData with the value that is returned. Text input can be the name of a brewery, a zip code, or a city. Also removes previous search results.
 // ======================================================
 const brewSearch = () => {
   let searchInput = document.querySelector(`#search-button`);
-  searchInput.addEventListener('click', (event) => {
+  searchInput.addEventListener('click', async(event) => {
     event.preventDefault
     const searchText = document.querySelector('#brew-search-input');
-    brewData(searchText.value);
+    const data = await brewData(searchText.value);
+    const filterData = data.filter(
+      (item) => {
+        return item.name.toLowerCase().includes(searchText.value.toLowerCase());
+        // console.log(item.name)
+      }  
+    )
+    console.log(filterData);
+    brewRemove();
+    showBrewInfo(filterData[0]);
   })
 }
 
