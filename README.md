@@ -83,18 +83,21 @@ https://postimg.cc/1VG5LCfm
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Endpoints and implement api | H | 3hrs| 3hrs | 0hrs |
-| HTML, CSS, and JavaScript files | H | 1hrs| 0hrs | 0hrs |
-| Async/await function to gather data from API | H | 4hrs| 0hrs | 0hrs |
-| Beer search input and button | H | 3hrs| 0hrs | 0hrs |
-| Beer info section | H | 4hrs| 0hrs | 0hrs |
-| Format with CSS | H | 6hrs| 0hrs | 0hrs |
-| Research how to review beers with notes | H | 2hrs| 0hrs | 0hrs |
-| Review beers with notes | H | 3hrs| 0hrs | 0hrs |
+| HTML, CSS, and JavaScript files | H | 1hrs| 1hrs | 0hrs |
+| Async/await function to gather data from API | H | 4hrs| 2hrs | 0hrs |
+| Display favorite brewery on home page at load | H | 3hrs | 0hrs | 0hrs |
+| Beer search input and button | H | 3hrs| 0.5hrs | 0hrs |
+| Set up ability to handle multiple search results | H | 1hrs | 1hrs | 0hrs |
+| Beer info section | H | 4hrs| 1hrs | 0hrs |
+| Format with CSS | H | 6hrs| 3hrs | 0hrs |
+| Research how to set up a menu | H | 2hrs| 0hrs | 0hrs |
+| Set up menu | H | 3hrs| 0hrs | 0hrs |
+| Research how to add a map | H | 2hrs| 0hrs | 0hrs |
 | Set up map | H | 4hrs| 0hrs | 0hrs |
-| Research how to find breweries near the user | H | 2hrs| 0hrs | 0hrs |
-| Find breweries near the user | H | 3hrs| 0hrs | 0hrs |
-| 2nd API with brewery beer menus/lists | H | 2hrs| 0hrs | 0hrs |
-| Research 2nd API with brewery beer menus/lists | H | 3hrs| 0hrs | 0hrs |
+| Set up second API | H | 2hrs| 0hrs | 0hrs |
+| Add random beer functionality | H | 3hrs| 0hrs | 0hrs |
+| Add ability to search bears | H | 2hrs| 0hrs | 0hrs |
+| Show breweries near the user on map | H | 3hrs| 0hrs | 0hrs |
 | Total | H | 40hrs| 0hrs | 0hrs |
 
 ## Code Snippet
@@ -111,3 +114,4 @@ function reverse(string) {
 - 11/10/2020 - Updated README.md
 - 11/10/2020 - Updated MVPS and timeframes
 - 11/10/2020 - Switched APIs, mixed up MVPs and modified my website goal
+- 11/12/2020 - Updated timeframes.
