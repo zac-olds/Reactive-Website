@@ -19,6 +19,7 @@ const brewData = async (brewery) => {
   try {
     const url = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${brewery}`);
     console.log(url.data[0].name);
+    brewRemove();
     showBrewInfo(url.data[0]);
     return url;
   } catch (error) {
@@ -54,6 +55,11 @@ const showBrewInfo = (brewData) => {
 }
 
 // ======================================================
-// function to remove previous search results
+// brewRemove - will remove the previous search results from the page so that new results can be displayed without stacking up multiple search results.
 // ======================================================
-
+const brewRemove = () => {
+  let oldBrew = document.querySelector('#brewery-info');
+  while (oldBrew.lastChild) {
+    oldBrew.removeChild(oldBrew.lastChild)
+  }
+}
