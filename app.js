@@ -22,7 +22,7 @@ const brewData = async (brewery) => {
     showBrewInfo(url.data[0]);
     return url;
   } catch (error) {
-    console.alert(`Something is Wrong: ${error}`)
+    console.log(`Something is Wrong: ${error}`)
   }
 };
 
