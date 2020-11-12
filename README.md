@@ -98,7 +98,7 @@ https://postimg.cc/1VG5LCfm
 | Add random beer functionality | H | 3hrs| 0hrs | 0hrs |
 | Add ability to search bears | H | 2hrs| 0hrs | 0hrs |
 | Show breweries near the user on map | H | 3hrs| 0hrs | 0hrs |
-| Total | H | 40hrs| 0hrs | 0hrs |
+| Total | H | 46hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
