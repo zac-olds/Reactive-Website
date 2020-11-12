@@ -96,7 +96,7 @@ https://postimg.cc/1VG5LCfm
 | Set up map | H | 4hrs| 0hrs | 0hrs |
 | Set up second API | H | 2hrs| 0hrs | 0hrs |
 | Add random beer functionality | H | 3hrs| 0hrs | 0hrs |
-| Add ability to search bears | H | 2hrs| 0hrs | 0hrs |
+| Add ability to search beers | H | 2hrs| 0hrs | 0hrs |
 | Show breweries near the user on map | H | 3hrs| 0hrs | 0hrs |
 | Total | H | 46hrs| 0hrs | 0hrs |
 
