@@ -54,6 +54,23 @@ main {
   height: 25px;
   width: 75px;
 }
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: #3b322a;
+}
+
+a:hover {
+  color: yellow;
+}
 
 /* ==========================================================================
    Footer Styles

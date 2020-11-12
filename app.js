@@ -58,7 +58,7 @@ brewSearch();
 const showBrewInfo = (brewData) => {
   let brewInfo = 
     `
-    <h3>${brewData.name}</h3>
+    <a href="${brewData.website_url}">${brewData.name}</a>
     <h4>${brewData.city}, ${brewData.state}</h4>
     `;
   let container = document.querySelector('#brewery-info');
