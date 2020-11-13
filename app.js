@@ -113,7 +113,10 @@ let mapMaker = (long, lat) => {
   center: [long, lat],
   zoom: 12,
   style: 'mapbox://styles/mapbox/navigation-guidance-night-v4'
-});
+  });
+  let marker = new mapboxgl.Marker()
+    .setLngLat([long, lat])
+    .addTo(map)
 }
 // mapMaker(-123.9749, 40.7736);
 // let search = new mapboxgl.LngLat(-123.9749, 40.7736)
