@@ -35,6 +35,12 @@ const brewSearch = () => {
     // console.log("Text value: ", searchText.value);
     // console.log("Data array: ", data);
 
+
+
+
+
+
+    
     // Checking if input value is a number
     let filterData;
     if (Number(searchText.value) == searchText.value) {
