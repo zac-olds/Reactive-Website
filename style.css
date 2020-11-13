@@ -9,9 +9,9 @@
 ========================================================================== */
 
 body {
-  background-image: url("images/wood-411643_1280.jpg");
+  background-image: url("images/jan-antonin-kolar-HB26V8IRL2k-unsplash.jpg");
   /* background-image: linear-gradient(#362e27, black); */
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   background-size: 800px auto;
   /* max-width: 1000px; */
   /* background-position: 50% 0; */
@@ -103,6 +103,8 @@ a:hover {
    Footer Styles
 ========================================================================== */
 
-@media (max-width: 500px) {
-
+@media (min-width: 800px) {
+  body {
+    background-repeat: repeat;
+  }
 }
