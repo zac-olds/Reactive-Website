@@ -7,10 +7,8 @@
   <script defer src="./app.js"></script>
   <script src="https://kit.fontawesome.com/03edf7f690.js" crossorigin="anonymous"></script>
   <!-- Map -->
-  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
-  type="text/javascript" charset="utf-8"></script>
-  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
-  type="text/javascript" charset="utf-8"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
   <!-- Map -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Roboto:wght@500&display=swap" rel="stylesheet">
@@ -31,16 +29,17 @@
       <div class="brew-search">
         <input type="text" id="brew-search-input" placeholder="Brewery Name"></input>
         <button type="submit" id="search-button">Search</button>
-      </div>
-      <h2 id="brew-info-head">Brewery Info</h2>
-      <div id="brewery-info">
+      <!-- </div> -->
+        <h2 id="brew-info-head">Brewery Info</h2>
+      <!-- <div id="brewery-info"> -->
         <a href="https://www.oskarblues.com/location/longmont-co-tasty-weasel-taproom/#brewery-menu">Oscar Blues Brewery</a>
         <h4>Longmont, CO</h4>
       </div>
     </section>
-    <section class="map-container"></section>
-      <h2>Brewery Map</h2>
-        <div id="brew-map"></div>
+    <section class="map-container">
+      <h2>Map</h2>
+      <div id='map' style='width: 400px; height: 300px;'></div>
+    </section>
   </main>
   <div></div>
   <footer>

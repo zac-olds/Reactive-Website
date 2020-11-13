@@ -9,7 +9,7 @@
 // List breweries by postal code
 // `https://api.openbrewerydb.org/breweries?by_postal=${zip}`
 
-
+mapboxgl.accessToken = 'pk.eyJ1IjoiemFjLW9sZHMiLCJhIjoiY2toZ2tiZzY0MTU0cDJwdDljZzk0YmVpMSJ9.AQbka6mY2EmPAHfwKEjleA';
 //===============================================
 // brewData - will fetch data from the openbrewerydb api and return it as an array of objects.
 // ===============================================
@@ -31,15 +31,6 @@ const brewSearch = () => {
     event.preventDefault
     const searchText = document.querySelector('#brew-search-input');
     const data = await brewData(searchText.value);
-    // console.log("Search text: ", searchText);
-    // console.log("Text value: ", searchText.value);
-    // console.log("Data array: ", data);
-
-
-
-
-
-
     
     // Checking if input value is a number
     let filterData;
@@ -70,8 +61,6 @@ const brewSearch = () => {
       console.log("filterNull: ", filterNull)
       mapMaker(filterNull[0].latitude, filterNull[0].longitude);
     }
-    
-    // showBrewInfo(filterData[1]);
   });
 }
 
@@ -114,20 +103,31 @@ const brewRemove = () => {
 //===============================================
 // MAP
 // ===============================================
-const mapMaker = (lat, long) => {
-// Initialize maps with my API key
-let platform = new H.service.Platform({
-  'apikey': '{qDWn3yBaAPr797xsyBo2TGWl3IlKPrnvyeZknZQQjmA}'
+// const mapMaker = (lat, long) => {
+// // Initialize maps with my API key
+// let platform = new H.service.Platform({
+//   'apikey': '{qDWn3yBaAPr797xsyBo2TGWl3IlKPrnvyeZknZQQjmA}'
+// });
+
+// // Get default map layers
+// let defaultLayers = platform.createDefaultLayers();
+
+// let map = new H.Map(
+//   document.getElementById('brew-map'),
+//   defaultLayers.vector.normal.map,
+//   {
+//     zoom: 10,
+//     center: { lat: lat, lng: long }
+//   });
+// }
+let mapMaker = (long, lat) => {
+  let map = new mapboxgl.Map({
+  container: 'map',
+  // center: [longitude, latitude]
+  center: [long, lat],
+  zoom: 12,
+  style: 'mapbox://styles/mapbox/navigation-guidance-night-v4'
 });
-
-// Get default map layers
-let defaultLayers = platform.createDefaultLayers();
-
-let map = new H.Map(
-  document.getElementById('brew-map'),
-  defaultLayers.vector.normal.map,
-  {
-    zoom: 10,
-    center: { lat: lat, lng: long }
-  });
 }
+mapMaker(-123.9749, 40.7736);
+// let search = new mapboxgl.LngLat(-123.9749, 40.7736)
