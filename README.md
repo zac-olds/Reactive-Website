@@ -85,15 +85,15 @@ https://postimg.cc/1VG5LCfm
 | Endpoints and implement api | H | 3hrs| 3hrs | 0hrs |
 | HTML, CSS, and JavaScript files | H | 1hrs| 1hrs | 0hrs |
 | Async/await function to gather data from API | H | 4hrs| 2hrs | 0hrs |
-| Display favorite brewery on home page at load | H | 3hrs | 0hrs | 0hrs |
-| Beer search input and button | H | 3hrs| 0.5hrs | 0hrs |
+| Display favorite brewery on home page at load | H | 3hrs | 1hrs | 0hrs |
+| Beer search input and button | H | 3hrs| 2hrs | 0hrs |
 | Set up ability to handle multiple search results | H | 1hrs | 1hrs | 0hrs |
-| Beer info section | H | 4hrs| 1hrs | 0hrs |
-| Format with CSS | H | 6hrs| 3hrs | 0hrs |
+| Beer info section | H | 4hrs| 2hrs | 0hrs |
+| Format with CSS | H | 6hrs| 4hrs | 0hrs |
 | Research how to set up a menu | H | 2hrs| 0hrs | 0hrs |
 | Set up menu | H | 3hrs| 0hrs | 0hrs |
-| Research how to add a map | H | 2hrs| 0hrs | 0hrs |
-| Set up map | H | 4hrs| 0hrs | 0hrs |
+| Research how to add a map | H | 2hrs| 1hrs | 0hrs |
+| Set up map | H | 4hrs| 2hrs | 0hrs |
 | Set up second API | H | 2hrs| 0hrs | 0hrs |
 | Add random beer functionality | H | 3hrs| 0hrs | 0hrs |
 | Add ability to search beers | H | 2hrs| 0hrs | 0hrs |

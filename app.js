@@ -27,7 +27,7 @@ const brewData = async (brewery) => {
 // ===============================================
 const brewSearch = () => {
   let searchInput = document.querySelector(`#search-button`);
-  searchInput.addEventListener('click', async(event) => {
+  searchInput.addEventListener('click', async (event) => {
     event.preventDefault
     const searchText = document.querySelector('#brew-search-input');
     const data = await brewData(searchText.value);
@@ -37,22 +37,36 @@ const brewSearch = () => {
 
     // Checking if input value is a number
     let filterData;
-    if (Number(searchText.value)==searchText.value) {
+    if (Number(searchText.value) == searchText.value) {
       filterData = data
     } else { // If input value is not a number, filter out API responses that dont include the input value in the name of the brewery (i.e. street name responses)
       filterData = data.filter(
         (item) => {
           return item.name.toLowerCase().includes(searchText.value.toLowerCase());
-          // console.log(item.name)
-        }  
+        }
       )
     }
     
     console.log("This is filtered", filterData);
     brewRemove();
     showBrewInfo(filterData[0]);
+    // ---------------- MAPS ----------------
+    console.log(filterData[0].latitude, filterData[0].longitude);
+    // filter out data results that do not have lat/long coordinates
+    if (filterData[0].latitude != null) {
+      mapMaker(filterData[0].latitude, filterData[0].longitude)
+    } else {
+      let filterNull = filterData.filter(
+        (item) => {
+          return item.latitude && item.longitude;
+        }
+      )
+      console.log("filterNull: ", filterNull)
+      mapMaker(filterNull[0].latitude, filterNull[0].longitude);
+    }
+    
     // showBrewInfo(filterData[1]);
-  })
+  });
 }
 
 brewSearch();
@@ -89,4 +103,25 @@ const brewRemove = () => {
   while (oldBrew.lastChild) {
     oldBrew.removeChild(oldBrew.lastChild)
   }
+}
+
+//===============================================
+// MAP
+// ===============================================
+const mapMaker = (lat, long) => {
+// Initialize maps with my API key
+let platform = new H.service.Platform({
+  'apikey': '{qDWn3yBaAPr797xsyBo2TGWl3IlKPrnvyeZknZQQjmA}'
+});
+
+// Get default map layers
+let defaultLayers = platform.createDefaultLayers();
+
+let map = new H.Map(
+  document.getElementById('brew-map'),
+  defaultLayers.vector.normal.map,
+  {
+    zoom: 10,
+    center: { lat: lat, lng: long }
+  });
 }
