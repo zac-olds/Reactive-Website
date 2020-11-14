@@ -43,7 +43,6 @@ const brewSearch = () => {
         }
       )
     }
-    
     console.log("This is filtered", filterData);
     brewRemove();
     showBrewInfo(filterData[0]);
@@ -73,7 +72,7 @@ const showBrewInfo = (brewData) => {
   let brewInfo;
   if (!brewData) {
     brewInfo = `
-    <h4>Please Check Your Spelling</h4>`
+    <h4>Try a Different Search</h4>`
   } else if (brewData.website_url != "") {
     brewInfo = 
     `
@@ -109,14 +108,15 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiemFjLW9sZHMiLCJhIjoiY2toZ2tiZzY0MTU0cDJwdDljZ
 let mapMaker = (long, lat) => {
   let map = new mapboxgl.Map({
   container: 'map',
-  // center: [longitude, latitude]
+  // center - long and lat coordinates of the brewery
   center: [long, lat],
   zoom: 12,
-  style: 'mapbox://styles/mapbox/navigation-guidance-night-v4'
+  style: 'mapbox://styles/mapbox/satellite-streets-v11'
   });
   let marker = new mapboxgl.Marker()
     .setLngLat([long, lat])
     .addTo(map)
 }
-// mapMaker(-123.9749, 40.7736);
-// let search = new mapboxgl.LngLat(-123.9749, 40.7736)
+
+// This initial call sets map for the Oskar Blues brewery in Longmont, CO
+mapMaker(-105.122735, 40.139209);
