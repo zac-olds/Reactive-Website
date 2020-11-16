@@ -58,7 +58,7 @@ const brewSearch = () => {
         }
       )
       console.log("filterNull: ", filterNull)
-      mapMaker(filterNull[0].longitude, filterNull[0].latitude);
+      mapMaker(filterNull[0].longitude, filterNull[0].latitude, filterNull[0].name);
     }
   });
 }
@@ -101,22 +101,37 @@ const brewRemove = () => {
 
 //===============================================
 // MAP
-// ===============================================
+// ==============================================
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiemFjLW9sZHMiLCJhIjoiY2toZ2tiZzY0MTU0cDJwdDljZzk0YmVpMSJ9.AQbka6mY2EmPAHfwKEjleA'; // Access key
 
-let mapMaker = (long, lat) => {
+let mapMaker = (long, lat, name) => {
   let map = new mapboxgl.Map({
-  container: 'map',
-  // center - long and lat coordinates of the brewery
-  center: [long, lat],
-  zoom: 12,
-  style: 'mapbox://styles/mapbox/satellite-streets-v11'
+    container: 'map',
+    // center - long and lat coordinates of the brewery
+    center: [long, lat],
+    zoom: 12,
+    style: 'mapbox://styles/mapbox/satellite-streets-v11'
   });
-  let marker = new mapboxgl.Marker()
+  // Adding text popup and marker styling
+  let popup = new mapboxgl.Popup({ offset: 25 }).setText(`Welcome to ${name}!`)
+  let icon = document.createElement('div')
+  icon.id = 'marker';
+  let marker = new mapboxgl.Marker(icon)
     .setLngLat([long, lat])
+    .setPopup(popup)
     .addTo(map)
 }
 
 // This initial call sets map for the Oskar Blues brewery in Longmont, CO
-mapMaker(-105.122735, 40.139209);
+let name = `Oscar Blues Brewery`;
+mapMaker(-105.122735, 40.139209, name);
+
+//===============================================
+// SOUND EFFECT
+//===============================================
+const brewSound = document.querySelector('#beer-sound');
+const searchButton = document.querySelector('#search-button');
+searchButton.addEventListener("click", function () {
+  brewSound.play();
+});
