@@ -1,10 +1,4 @@
 /* ==========================================================================
-   Media Query
-========================================================================== */
-
-
-
-/* ==========================================================================
    Global Styles
 ========================================================================== */
 
@@ -12,7 +6,6 @@ body {
   background-image: url("images/leaves-336694_1920.jpg");
   background-repeat: repeat;
   background-size: contain;
-  /* max-width: 1000px; */
   text-align: center;
 }
 
@@ -30,13 +23,8 @@ body {
 }
 
 .menu-bars {
-  
   font-size: 25px;
   padding: 10px 20px;
-}
-
-.nav-container h1 {
-  align-self: center;
 }
 
 /* ==========================================================================
@@ -48,28 +36,22 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 h2 {
-  text-shadow: 3px 2px 3px #79736c;
-}
-.map-container {
-  box-shadow: 10px 10px 5px #1c1713;
-  border: 5px solid #b7c7c6;
-  margin-top: 50px;
-  background-image: url("images/annie-spratt-AFB6S2kibuk-unsplash.jpg");
-  background-size: contain;
-  background-repeat: round;
-  transform: rotate(-9deg)
+  text-shadow: 3px 2px 3px #585551;
+  font-family: 'Arvo', serif;
+  font-size: 30px;
 }
 
 .foam {
   background-image: url("images/frank-luca-c-fbj_fTFUM-unsplash.jpg");
   background-size: 550px;
-  background-position: -130px -50px;
+  background-position: -130px -45px;
   height: 300px;
   width: 300px;
   border-radius: 100%;
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-shadow: 1px 2px 3px #8f8982;
   box-shadow: 20px 20px 5px 5px #1c1713;
   display: flex;
@@ -86,17 +68,81 @@ h2 {
 }
 
 input {
-  background-color: #d3d3bc;
+  background-color: #FBF5DF;
   border: none;
   box-shadow: 5px 5px 5px #1c1713;
   border-radius: 5px;
 }
 
 button {
-  background-color: #d3d3bc;
+  background-color: #FBF5DF;
   border: none;
   box-shadow: 5px 5px 5px #1c1713;
   border-radius: 5px;
+}
+
+/* button:hover {
+  color: black;
+} */
+
+#brew-search-input {
+  margin: 20px 0px 10px 0px;
+  height: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#brew-header {
+  padding: 10px;
+}
+
+#search-button {
+  width: 75px;
+  height: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#brew-info-head {
+  margin: 15px 0px 5px 0px;
+}
+
+#brewery-info h3 {
+  margin: 0px 0px 0px 0px;
+}
+
+#brewery-info h4 {
+  margin: 10px 0px 0px 0px;
+}
+
+#brewery-info a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+::placeholder {
+  color: black;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: #BBCD49;
+}
+
+a:hover {
+  color: #FBF5DF;
+}
+
+.map-container {
+  box-shadow: 10px 10px 5px #1c1713;
+  border: 5px solid #b7c7c6;
+  margin-top: 50px;
+  background-image: url("images/annie-spratt-AFB6S2kibuk-unsplash.jpg");
+  background-size: contain;
+  background-repeat: round;
+  transform: rotate(-9deg)
 }
 
 #map {
@@ -105,52 +151,12 @@ button {
 }
 
 #marker {
-  background-image: url('images/beer-hiclipart.com.png');
+  background-image: url('images/duff-beer.png');
   background-size: contain;
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  /* cursor: pointer; */
 }
-
-#brew-info-head {
-  margin: 15px 0px 5px 0px;
-}
-
-#brewery-info h4 {
-  margin: 5px 0px 0px 0px;
-}
-#brew-search-input {
-  margin: 20px 0px 10px 0px;
-}
-
-#brew-header {
-  padding: 10px;
-}
-
-#search-button {
-  height: 25px;
-  width: 75px;
-}
-a {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-a:link {
-  color: black;
-}
-
-a:visited {
-  color: #3b322a;
-}
-
-a:hover {
-  color: yellow;
-}
-
-
 
 /* ==========================================================================
    Footer Styles
@@ -160,22 +166,10 @@ a:hover {
 /* ==========================================================================
    Media Query
 ========================================================================== */
-/* @media (max-width: 800px) {
-  body {
-    background-repeat: repeat;
-  }
-} */
-
 @media (max-width: 600px) {
-  /* html {
-    width: 80vw;
-  }
-  .nav-container {
-    width: 100%;
-  } */
   .map-container {
     max-width: 80vw;
-    margin: 50px;
+    margin: 20px 50px 20px 50px;
     /* max-height: 80%; */
   }
   .mapboxgl-canvas {
@@ -190,15 +184,13 @@ a:hover {
 
 @media (max-width: 385px) {
   
-  
   .foam {
     max-width: 60vw;
     max-height: 60vw;
     background-size: 105vw;
     background-position: 52% 40%;
     background-repeat: no-repeat;
-    /* margin: 50px; */
-    
+    margin: 20px 50px 20px 50px;
   }
   .foam a {
     font-size: 14px;
@@ -208,18 +200,38 @@ a:hover {
     font-size: 12px;
   }
 
+  h2 {
+    margin: 10px 0px 10px 0px;
+  }
   #map {
     max-width: 60vw;
     max-height: 40vw;
   }
   #brew-search-input {
-    width: 70%;
-    font-size: 12px;
+    width: 100px;
+    height: 15px;
+    font-size: 11px;
   }
   #search-button {
-    width: 50%;
-    height: 50%;
+    width: 50px;
+    height: 15px;
+    padding: 0px 0px 3px 0px;
     font-size: 12px;
+    margin: 5px 0px -10px 0px;
+  }
+  #brewery-info a {
+    font-size: 12px;
+    margin: 5px;
+  }
+
+  #brewery-info h3 {
+    font-size: 12px;
+    margin: 5px;
+  }
+
+  #brewery-info h4 {
+    font-size: 10px;
+    margin: 0px 0px 10px 0px;
   }
 }
 
