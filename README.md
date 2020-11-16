@@ -53,12 +53,14 @@ https://wireframe.cc/4RLOJd
 
 #### PostMVP  
 
-- Set up menu
+
+- Set up sound for search button
 - Set up map
+- Add ability to find breweries near the user
+- Set up menu
 - Add a second API with searchable beer database
 - Add random beer functionality
 - Add ability to search beers
-- Add ability to find breweries near the user
 
 
 ## Project Schedule
@@ -69,9 +71,9 @@ The below schedule is how I intend to complete my project by the deadline. Some 
 |---|---| ---|
 |Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Nov 10| Project Approval | Complete
-|Nov 12| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Nov 13| Pseudocode / actual code | Incomplete
-|Nov 16| MVP | Incomplete
+|Nov 12| Core Application Structure (HTML, CSS, etc.) | Complete
+|Nov 13| Pseudocode / actual code | Complete
+|Nov 16| MVP | Complete
 |Nov 17| Presentations | Incomplete
 
 ## Priority Matrix
@@ -89,15 +91,15 @@ https://postimg.cc/1VG5LCfm
 | Beer search input and button | H | 3hrs| 2hrs | 0hrs |
 | Set up ability to handle multiple search results | H | 1hrs | 1hrs | 0hrs |
 | Beer info section | H | 4hrs| 2hrs | 0hrs |
-| Format with CSS | H | 6hrs| 4hrs | 0hrs |
+| Format with CSS | H | 6hrs| 5hrs | 0hrs |
 | Research how to set up a menu | H | 2hrs| 0hrs | 0hrs |
 | Set up menu | H | 3hrs| 0hrs | 0hrs |
-| Research how to add a map | H | 2hrs| 1hrs | 0hrs |
-| Set up map | H | 4hrs| 2hrs | 0hrs |
+| Research how to add a map | H | 2hrs| 2hrs | 0hrs |
+| Set up map | H | 4hrs| 3hrs | 0hrs |
+| Show breweries near the user on map | H | 3hrs| 1hrs | 0hrs |
 | Set up second API | H | 2hrs| 0hrs | 0hrs |
 | Add random beer functionality | H | 3hrs| 0hrs | 0hrs |
 | Add ability to search beers | H | 2hrs| 0hrs | 0hrs |
-| Show breweries near the user on map | H | 3hrs| 0hrs | 0hrs |
 | Total | H | 46hrs| 0hrs | 0hrs |
 
 ## Code Snippet
@@ -115,3 +117,4 @@ function reverse(string) {
 - 11/10/2020 - Updated MVPS and timeframes
 - 11/10/2020 - Switched APIs, mixed up MVPs and modified my website goal
 - 11/12/2020 - Updated timeframes.
+- 11/16/2020 - Updated timeframes, added Post MVP four sound.
