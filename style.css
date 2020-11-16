@@ -99,9 +99,10 @@ button {
   border-radius: 5px;
 }
 
-/* #map {
-  
-} */
+#map {
+  width: 400px; 
+  height: 300px;
+}
 
 #marker {
   background-image: url('images/beer-hiclipart.com.png');
@@ -165,19 +166,61 @@ a:hover {
   }
 } */
 
-@media (max-width: 500px) {
-  html {
-    width: 100vw;
+@media (max-width: 600px) {
+  /* html {
+    width: 80vw;
   }
   .nav-container {
     width: 100%;
-  }
-  /* .map-container {
-    max-width: 80%;
-    max-height: 80%;
+  } */
+  .map-container {
+    max-width: 80vw;
+    margin: 50px;
+    /* max-height: 80%; */
   }
   .mapboxgl-canvas {
-    max-width: 80%;
-    max-height: 80%; */
+    max-width: 80vw;
+    /* max-height: 80%; */
+  }
+  #map {
+    max-width: 60vw;
+    max-height: 40vw;
   }
 }
+
+@media (max-width: 385px) {
+  
+  
+  .foam {
+    max-width: 60vw;
+    max-height: 60vw;
+    background-size: 105vw;
+    background-position: 52% 40%;
+    background-repeat: no-repeat;
+    /* margin: 50px; */
+    
+  }
+  .foam a {
+    font-size: 14px;
+  }
+
+  .foam h4 {
+    font-size: 12px;
+  }
+
+  #map {
+    max-width: 60vw;
+    max-height: 40vw;
+  }
+  #brew-search-input {
+    width: 70%;
+    font-size: 12px;
+  }
+  #search-button {
+    width: 50%;
+    height: 50%;
+    font-size: 12px;
+  }
+}
+
+/* background-position: -95px -32px; */

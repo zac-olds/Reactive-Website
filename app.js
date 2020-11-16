@@ -50,15 +50,22 @@ const brewSearch = () => {
     console.log(filterData[0].latitude, filterData[0].longitude);
     // filter out data results that do not have lat/long coordinates
     if (filterData[0].latitude != null) {
-      mapMaker(filterData[0].longitude, filterData[0].latitude)
+      mapMaker(filterData)
     } else {
       let filterNull = filterData.filter(
         (item) => {
           return item.latitude && item.longitude;
         }
       )
-      console.log("filterNull: ", filterNull)
-      mapMaker(filterNull[0].longitude, filterNull[0].latitude, filterNull[0].name);
+      if (filterNull.length > 0) {
+        mapMaker(filterNull);
+      } else {
+        console.log("No Map Data")
+        let clear = document.querySelector('#map');
+        clear.innerHTML = '<h4>No mapping data available for this brewery.</h4>';
+      }
+      
+
     }
   });
 }
@@ -105,27 +112,49 @@ const brewRemove = () => {
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiemFjLW9sZHMiLCJhIjoiY2toZ2tiZzY0MTU0cDJwdDljZzk0YmVpMSJ9.AQbka6mY2EmPAHfwKEjleA'; // Access key
 
-let mapMaker = (long, lat, name) => {
+let mapMaker = (data) => {
+  console.log("Starting object: ", data)
+  // let long = data[0].longitude;
+  // let lat = data[0].latitude;
+  // let name = data[0].name;
+  // console.log("long: ", long);
+  // console.log("lat: ", lat);
+  // console.log("name: ", name);
   let map = new mapboxgl.Map({
     container: 'map',
     // center - long and lat coordinates of the brewery
-    center: [long, lat],
+    center: [data[0].longitude, data[0].latitude],
     zoom: 12,
     style: 'mapbox://styles/mapbox/satellite-streets-v11'
   });
   // Adding text popup and marker styling
-  let popup = new mapboxgl.Popup({ offset: 25 }).setText(`Welcome to ${name}!`)
-  let icon = document.createElement('div')
-  icon.id = 'marker';
-  let marker = new mapboxgl.Marker(icon)
-    .setLngLat([long, lat])
-    .setPopup(popup)
-    .addTo(map)
+  data.forEach(function (brew) {
+    let popup = new mapboxgl.Popup({ offset: 25 }).setText(`Welcome to ${brew.name}!`)
+    let icon = document.createElement('div')
+    icon.id = 'marker';
+  
+    let marker = new mapboxgl.Marker(icon)
+      .setLngLat([brew.longitude, brew.latitude])
+      .setPopup(popup)
+      .addTo(map)
+  })
 }
 
+// function to set up multiple markers on the map
+
+
 // This initial call sets map for the Oskar Blues brewery in Longmont, CO
-let name = `Oscar Blues Brewery`;
-mapMaker(-105.122735, 40.139209, name);
+let oskarBlues = [
+  {
+    name: 'Oscar Blues Brewery',
+    longitude: -105.122735,
+    latitude: 40.139209
+  }
+]
+console.log(oskarBlues)
+mapMaker(oskarBlues);
+
+// setMarker(-105.122750, 40.139215, name)
 
 //===============================================
 // SOUND EFFECT
