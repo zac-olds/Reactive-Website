@@ -113,7 +113,7 @@ button:hover{
 }
 
 #brewery-info h3 {
-  margin: 0px 0px 0px 0px;
+  margin: 0px 10px 0px 10px;
 }
 
 #brewery-info h4 {
@@ -124,6 +124,7 @@ button:hover{
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
+  margin: 0px 10px 0px 10px;
 }
 
 a:link {

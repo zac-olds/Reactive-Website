@@ -1,3 +1,5 @@
+// const MAP_TOKEN = require('./secrets.js');
+
 // API Examples:
 
 // Search by brewery
@@ -23,7 +25,7 @@ const brewData = async (brewery) => {
 };
 
 // ===============================================
-// brewSearch - adds an event listener to the brewery search input and calls brewData with the value that is returned. Text input can be the name of a brewery, a zip code, or a city. Also removes previous search results.
+// brewSearch - adds an event listener to the brewery search input and calls brewData with the value that is returned. Text input can be the name of a brewery, a zip code, or a city. Also filters extraneous search results to improve usability, removes previous search results, and creates a map with markers based on the search input provided by the user.
 // ===============================================
 const brewSearch = () => {
   let searchInput = document.querySelector(`#search-button`);
@@ -31,8 +33,8 @@ const brewSearch = () => {
     event.preventDefault
     const searchText = document.querySelector('#brew-search-input');
     const data = await brewData(searchText.value);
-    
-    // Checking if input value is a number
+
+    // Checking if input value is a number, allowing user to search by zip code
     let filterData;
     if (Number(searchText.value) == searchText.value) {
       filterData = data
@@ -43,11 +45,13 @@ const brewSearch = () => {
         }
       )
     }
-    console.log("This is filtered", filterData);
+    // remove previous search results
     brewRemove();
+    // populate page with search results
     showBrewInfo(filterData[0]);
-    // ---------------- MAPS ----------------
-    console.log(filterData[0].latitude, filterData[0].longitude);
+
+    // ---------------- MAP ----------------
+
     // filter out data results that do not have lat/long coordinates
     if (filterData[0].latitude != null) {
       mapMaker(filterData)
@@ -57,6 +61,7 @@ const brewSearch = () => {
           return item.latitude && item.longitude;
         }
       )
+      // displays an error when filtering data results in an empty array
       if (filterNull.length > 0) {
         mapMaker(filterNull);
       } else {
@@ -64,7 +69,7 @@ const brewSearch = () => {
         let clear = document.querySelector('#map');
         clear.innerHTML = '<h4>No mapping data available for this brewery.</h4>';
       }
-      
+
 
     }
   });
@@ -81,21 +86,22 @@ const showBrewInfo = (brewData) => {
     brewInfo = `
     <h4>Try a Different Search</h4>`
   } else if (brewData.website_url != "") {
-    brewInfo = 
-    `
+    brewInfo =
+      `
     <a href="${brewData.website_url}">${brewData.name}</a>
     <h4>${brewData.city}, ${brewData.state}</h4>
     `;
   } else {
-    brewInfo = 
-    `
+    brewInfo =
+      `
     <h3>${brewData.name}</h3>
     <h4>${brewData.city}, ${brewData.state}</h4>
     `;
   }
   let container = document.querySelector('#brewery-info');
-    container.insertAdjacentHTML('beforeend', brewInfo);
+  container.insertAdjacentHTML('beforeend', brewInfo);
 }
+
 //===============================================
 // brewRemove - will remove the previous search results from the page so that new results can be displayed without stacking up multiple search results.
 // ===============================================
@@ -107,19 +113,11 @@ const brewRemove = () => {
 }
 
 //===============================================
-// MAP
+// mapMaker - will create a map using the mapbox API and data (long, lat, brewery name) that is passed in from the initial openbrewerydb API call. It will also iterate over each object in the data array and populate the map with additional markers - if there are any.
 // ==============================================
-
-mapboxgl.accessToken = 'pk.eyJ1IjoiemFjLW9sZHMiLCJhIjoiY2toZ2tiZzY0MTU0cDJwdDljZzk0YmVpMSJ9.AQbka6mY2EmPAHfwKEjleA'; // Access key
+mapboxgl.accessToken = MAP_TOKEN; // Access key
 
 let mapMaker = (data) => {
-  console.log("Starting object: ", data)
-  // let long = data[0].longitude;
-  // let lat = data[0].latitude;
-  // let name = data[0].name;
-  // console.log("long: ", long);
-  // console.log("lat: ", lat);
-  // console.log("name: ", name);
   let map = new mapboxgl.Map({
     container: 'map',
     // center - long and lat coordinates of the brewery
@@ -132,7 +130,7 @@ let mapMaker = (data) => {
     let popup = new mapboxgl.Popup({ offset: 25 }).setText(`Welcome to ${brew.name}!`)
     let icon = document.createElement('div')
     icon.id = 'marker';
-  
+
     let marker = new mapboxgl.Marker(icon)
       .setLngLat([brew.longitude, brew.latitude])
       .setPopup(popup)
@@ -140,10 +138,7 @@ let mapMaker = (data) => {
   })
 }
 
-// function to set up multiple markers on the map
-
-
-// This initial call sets map for the Oskar Blues brewery in Longmont, CO
+// This initial call sets map for the Oskar Blues brewery in Longmont, CO when first loading into the page
 let oskarBlues = [
   {
     name: 'Oscar Blues Brewery',
@@ -151,13 +146,10 @@ let oskarBlues = [
     latitude: 40.139209
   }
 ]
-console.log(oskarBlues)
 mapMaker(oskarBlues);
 
-// setMarker(-105.122750, 40.139215, name)
-
 //===============================================
-// SOUND EFFECT
+// SEARCH SOUND EFFECT - this sets up a crack 'em sound effect when you hit the search button.
 //===============================================
 const brewSound = document.querySelector('#beer-sound');
 const searchButton = document.querySelector('#search-button');
