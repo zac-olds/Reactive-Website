@@ -117,7 +117,7 @@ const brewRemove = () => {
 //===============================================
 // mapMaker - will create a map using the mapbox API and data (long, lat, brewery name) that is passed in from the initial openbrewerydb API call. It will also iterate over each object in the data array and populate the map with additional markers - if there are any.
 // ==============================================
-mapboxgl.accessToken = 'pk.eyJ1IjoiemFjLW9sZHMiLCJhIjoiY2tobThnOHVuMTB6ZTJ1cDlkZHE3MnFlcSJ9.ok3zmZGJ28brQ0ETHYtTFw'; // Access key
+mapboxgl.accessToken = 'pk.eyJ1IjoiemFjLW9sZHMiLCJhIjoiY2toZ2tiZzY0MTU0cDJwdDljZzk0YmVpMSJ9.AQbka6mY2EmPAHfwKEjleA'; // Access key
 
 let mapMaker = (data) => {
   let map = new mapboxgl.Map({
