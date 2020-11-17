@@ -6,7 +6,7 @@ brewQuery
 
 ## Project Description
 
-A simple website that will allow the user to search a catalog of beers from around the world and get information about the beer (e.g. type, ABV, glassware, brewery, description of the beer). Website will load up with information and brewery location of a random beer, and allow the user to choose what they want to do from a drop down menu. Menu items will include beer search, finding brewery locations and random beer.
+A simple website that will display basic brewery info, and a map. The user can search a database of breweries in the United States and bring up a map and a link to the breweries website (if available). The search feature will allow the user to search breweries using a zip code, brewery name, or city/state. Website will initially load with information and brewery location of one of my favorite breweries in Longmont, CO.
 
 ## API and Data Sample
 https://api.openbrewerydb.org/breweries/search?query=avery
@@ -84,27 +84,27 @@ https://postimg.cc/1VG5LCfm
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Endpoints and implement api | H | 3hrs| 3hrs | 0hrs |
-| HTML, CSS, and JavaScript files | H | 1hrs| 1hrs | 0hrs |
-| Async/await function to gather data from API | H | 4hrs| 2hrs | 0hrs |
-| Display favorite brewery on home page at load | H | 3hrs | 1.5hrs | 0hrs |
-| Beer search input and button | H | 3hrs| 2.5hrs | 0hrs |
-| Set up ability to handle multiple search results | H | 1hrs | 1hrs | 0hrs |
-| Beer info section | H | 4hrs| 2hrs | 0hrs |
-| Format with CSS | H | 6hrs| 6hrs | 0hrs |
+| Endpoints and implement api | H | 3hrs| 3hrs | 3hrs |
+| HTML, CSS, and JavaScript files | H | 1hrs| 1hrs | 1hrs |
+| Async/await function to gather data from API | H | 4hrs| 2hrs | 2hrs |
+| Display favorite brewery on home page at load | H | 3hrs | 1.5hrs | 1.5hrs |
+| Beer search input and button | H | 3hrs| 3hrs | 3hrs |
+| Set up ability to handle multiple search results | H | 1hrs | 1hrs | 1hrs |
+| Beer info section | H | 4hrs| 4hrs | 4hrs |
+| Format with CSS | H | 6hrs| 8hrs | 8hrs |
 | Research how to set up a menu | H | 2hrs| 0hrs | 0hrs |
 | Set up menu | H | 3hrs| 0hrs | 0hrs |
-| Research how to add a map | H | 2hrs| 2hrs | 0hrs |
-| Set up map | H | 4hrs| 3hrs | 0hrs |
-| Show breweries near the user on map | H | 3hrs| 3hrs | 0hrs |
-| Set up second API | H | 2hrs| 0hrs | 0hrs |
+| Research how to add a map | H | 2hrs| 2hrs | 2hrs |
+| Set up map | H | 4hrs| 4hrs | 4hrs |
+| Show breweries near the user on map | H | 3hrs| 3hrs | 3hrs |
+| Set up second API | H | 2hrs| 2hrs | 2hrs |
 | Add random beer functionality | H | 3hrs| 0hrs | 0hrs |
 | Add ability to search beers | H | 2hrs| 0hrs | 0hrs |
-| Total | H | 46hrs| 0hrs | 0hrs |
+| Total | H | 47hrs| 34.5hrs | 34.5hrs |
 
 ## Code Snippet
 
-This is a place holder for a code snippet that I am particularly proud of.  
+This is a forEach loop that adds markers to the map for each brewery that is present in the object array that is returned from the user's search. It is a simple solution for showing any breweries that might be near the user when they search using a zip code.
 
 ```
 data.forEach(function (brew) {
@@ -126,3 +126,4 @@ data.forEach(function (brew) {
 - 11/12/2020 - Updated timeframes
 - 11/16/2020 - Updated timeframes, added Post MVP four sound
 - 11/16/2020 - Added code snippet
+- 11/17/2020 - Updated project description, time frames, and code snippet description

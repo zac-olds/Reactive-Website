@@ -1,5 +1,3 @@
-// const MAP_TOKEN = require('./secrets.js');
-
 // API Examples:
 
 // Search by brewery
@@ -13,16 +11,17 @@
 
 
 //===============================================
-// brewData - will fetch data from the openbrewerydb api and return it as an array of objects.
+// brewData - will fetch data based on user input from the openbrewerydb api and return it as an array of objects.
 // ===============================================
-const brewData = async (brewery) => {
+const brewData = async (input) => {
   try {
-    const url = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${brewery}`);
+    const url = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${input}`);
     return url.data;
   } catch (error) {
     console.log(`Something is Wrong: ${error}`)
   }
 };
+
 
 // ===============================================
 // brewSearch - adds an event listener to the brewery search input and calls brewData with the value that is returned. Text input can be the name of a brewery, a zip code, or a city. Also filters extraneous search results to improve usability, removes previous search results, and creates a map with markers based on the search input provided by the user.
@@ -77,6 +76,7 @@ const brewSearch = () => {
 
 brewSearch();
 
+
 // ===============================================
 // showBrewInfo - will take data obtained from brewData and append it to the brewery info section of the website. It will also add the link to the brewery if it is available.
 // ===============================================
@@ -102,6 +102,7 @@ const showBrewInfo = (brewData) => {
   container.insertAdjacentHTML('beforeend', brewInfo);
 }
 
+
 //===============================================
 // brewRemove - will remove the previous search results from the page so that new results can be displayed without stacking up multiple search results.
 // ===============================================
@@ -111,6 +112,7 @@ const brewRemove = () => {
     oldBrew.removeChild(oldBrew.lastChild)
   }
 }
+
 
 //===============================================
 // mapMaker - will create a map using the mapbox API and data (long, lat, brewery name) that is passed in from the initial openbrewerydb API call. It will also iterate over each object in the data array and populate the map with additional markers - if there are any.
@@ -147,6 +149,7 @@ let oskarBlues = [
   }
 ]
 mapMaker(oskarBlues);
+
 
 //===============================================
 // SEARCH SOUND EFFECT - this sets up a crack 'em sound effect when you hit the search button.
