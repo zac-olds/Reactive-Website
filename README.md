@@ -8,6 +8,8 @@ brewQuery
 
 A simple website that will display basic brewery info, and a map. The user can search a database of breweries in the United States and bring up a map and a link to the breweries website (if available). The search feature will allow the user to search breweries using a zip code, brewery name, or city/state. Website will initially load with information and brewery location of one of my favorite breweries in Longmont, CO.
 
+Deployed Link: https://zac-olds.github.io/brewQuery/
+
 ## API and Data Sample
 https://api.openbrewerydb.org/breweries/search?query=avery
 
